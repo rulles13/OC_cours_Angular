@@ -1,8 +1,5 @@
 <div class="face-snap-card" [ngClass]="{ snapped: buttonText === 'unlike!' }">
     <h1>{{ faceSnap.title | uppercase }}</h1>
-    <p>Released at {{ faceSnap.createdDate | date: 'HH:mm, on yyyy MMMM d' }}</p>
-    <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
     <p> {{ faceSnap.description }}</p>
-    <p> <button (click)="onSnap()"> {{ buttonText }} </button> like : {{ faceSnap.snaps }}</p>
-    <p *ngIf="faceSnap.location">Picture take at {{ faceSnap.location }}</p>
+    <button (click)="onViewFaceSnap()">View</button>
 </div>
